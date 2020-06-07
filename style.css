@@ -4,6 +4,7 @@
     --modal-duration: 1s;
     --primary-color: #30336b;
     --secondary-color: #be2edd;
+    --border-color: rgba(200, 200, 200, .1);
 }
 
 * {
@@ -17,7 +18,7 @@ body {
 
 nav {
     background-color: var(--primary-color);
-    border-right: 2px solid rgba(200, 200, 200, .1);
+    border-right: 2px solid var(--border-color);
     color: #fff;
     position: fixed;
     top: 0;
@@ -25,7 +26,7 @@ nav {
     width: 200px;
     height: 100vh;
     z-index: 100;
-    /* transform:translateX(-100%) */
+    transform: translateX(-100%)
 }
 
 nav .logo {
@@ -38,12 +39,28 @@ nav .logo img {
     width: 75px;
     border-radius: 50%;
 }
+
 nav ul {
     padding: 0;
-    list-style-type:none;
-    margin:0;
+    list-style-type: none;
+    margin: 0;
 }
+
 nav ul li {
-    border-bottom: 2px solid rgba(200, 200, 200, .1);
+    border-bottom: 2px solid var(--border-color);
     padding: 20px;
+}
+
+nav ul li:first-of-type {
+    border-top: 2px solid var(--border-color);
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+}
+
+nav ul li a:hover {
+    border-bottom: unset;
 }
