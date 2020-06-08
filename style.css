@@ -14,6 +14,12 @@
 body {
     font-family: 'Muli', sans-serif;
     margin: 0;
+    transition: transform 0.3s ease-in;
+}
+
+body.show-nav {
+    /*Width of nav*/
+    transform: translateX(300px);
 }
 
 nav {
@@ -23,7 +29,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 300px;
     height: 100vh;
     z-index: 100;
     transform: translateX(-100%)
@@ -117,7 +123,7 @@ button:focus {
 
 .modal-container {
     background-color: rgba(0, 0, 0, .6);
-    /* display:none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -161,14 +167,16 @@ button:focus {
     display: block;
     margin-bottom: 5px;
 }
+
 .modal-form .form-input {
     padding: 8px;
     width: 100%;
 }
+
 .close-btn {
-    background:transparent;
-    font-size:25px;
-    position:absolute;
-    top:0;
-    right:0;
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
