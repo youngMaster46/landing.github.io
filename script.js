@@ -5,3 +5,9 @@ const modal = document.getElementById('modal')
 
 // Toggle nav
 toggle.addEventListener('click', () => document.body.classList.toggle('show-nav'))
+
+// Show modal 
+open.addEventListener('click', () => modal.classList.add('show-modal'))
+
+// Hide modal
+close.addEventListener('click', () => modal.classList.remove('show-modal'))
